@@ -1,0 +1,129 @@
+:root {
+  /*Primary Colors*/
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  /*Neutral colors*/
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  /*fonts*/
+  --fw-bold: 700;
+  --fw-normal: 500;
+  --ff-Fraunces: 'Fraunces', serif;
+  --ff-Montserrat: 'Montserrat', sans-serif;
+  --font-size: 14px;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Cream);
+  font-size: var(--font-size);
+  font-weight: var(--fw-normal);
+  font-family: var(--ff-Montserrat);
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 600px;
+  height: 440px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.desk-img {
+  width: 300px;
+}
+.mob-img {
+  display: none;
+}
+.card-content {
+  background-color: var(--White);
+  padding: 30px;
+}
+.category {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--Dark-grayish-blue);
+}
+h1 {
+  font-family: var(--ff-Fraunces);
+  font-weight: var(--fw-bold);
+  width: 200px;
+  line-height: 1;
+}
+.desc {
+  line-height: 1.5;
+  color: var(--Dark-grayish-blue);
+}
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+.new-price {
+  font-size: 30px;
+  font-family: var(--ff-Fraunces);
+  font-weight: var(--fw-bold);
+  color: var(--Dark-cyan);
+}
+.old-price {
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+.button {
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: var(--fw-bold);
+  margin: 0 auto;
+  display: block;
+}
+.button img {
+  margin-right: 15px;
+}
+button:hover {
+  background-color: hsl(158, 36%, 17%);
+  transition-duration: .5s;
+} 
+.category ,
+.product-price,
+.desc,
+.category,
+h1 {
+  margin-bottom: 30px;
+}
+
+@media  (max-width: 767px) {
+  body {
+    height: 100%;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px 10px;
+  }
+  .desk-img{
+      display: none;
+  }
+  .mob-img{
+      display: block;
+      width: 100%;
+  }
+  h1 {
+    width: 100%;
+  }
+}
